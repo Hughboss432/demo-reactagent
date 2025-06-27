@@ -19,11 +19,7 @@ if user_input:
 
     result = asyncio.run(run())
 
-    #st.markdown(user_input)
-    #st.markdown(result)
-
     # Atualiza histórico de chat
-    #print(result)
     st.session_state.chat_history.append(AIMessage(content=result))
 
     # salvando em txt o chat
@@ -37,8 +33,6 @@ if user_input:
                 elif isinstance(message, AIMessage):
                     file.write(f"AI: {message.content}\n\n")
             file.write("End of Conversation")
-
-
 
 for msg in st.session_state.chat_history:
     if hasattr(msg, "tool_calls") and msg.tool_calls:
