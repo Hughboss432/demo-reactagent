@@ -30,7 +30,7 @@ Esperado: download de \~4 GB; uma vez concluído o modelo fica disponível loc
 ## 2 ▪ Clone o repositório e instale dependências
 
 ```bash
-git clone https://github.com/sua‑org/seu‑repo.git
+git clone https://github.com/Hughboss432/automato-reactagent.git
 cd seu‑repo
 # ambiente virtual opcional
 python -m venv .venv && source .venv/bin/activate
@@ -63,7 +63,7 @@ Streamlit imprimirá algo como:
 
 ```
   You can now view your Streamlit app in your browser.
-  Local URL: http://localhost:8501
+  Local URL: http://localhost:xxxx
 ```
 
 Acesse o link no navegador. Pronto! O chat usará o modelo **llama3.2** local e chamará as ferramentas servidas pelo MCP.
