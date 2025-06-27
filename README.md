@@ -32,7 +32,7 @@ Esperado: download de \~4 GB; uma vez concluído o modelo fica disponível loc
 ```bash
 git clone https://github.com/Hughboss432/automato-reactagent.git
 cd seu‑repo
-# ambiente virtual opcional
+# ambiente virtual opcional X (OBRIGATORIO ATUALMENTE)
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 python server.py
 ```
 
-*Escuta em stdio/pipe; nenhum porto TCP é aberto.*
+*Escuta em stdio/pipe; nenhum port TCP é aberto.*
 
 ---
 
@@ -70,7 +70,7 @@ Acesse o link no navegador. Pronto! O chat usará o modelo **llama3.2** local e 
 
 ---
 
-## 5 ▪ Atalho (tudo‑em‑um)
+## 5 ▪ Atalho (tudo‑em‑um) X (AINDA NÃO FUNCIONA)
 
 Linux/macOS:
 
@@ -86,7 +86,7 @@ Windows PowerShell:
 
 ---
 
-## Problemas comuns
+## Problemas comuns X (TEMPORARIO)
 
 | Sintoma                              | Causa provável                                     | Solução                                                                          |
 | ------------------------------------ | -------------------------------------------------- | -------------------------------------------------------------------------------- |
