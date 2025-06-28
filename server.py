@@ -37,13 +37,13 @@ def multiply(a: int, b: int):
     return a * b
 
 @mcp.tool()
-def secret_word():
+def secret_word() -> str:
     """
-    Fornece uma palavra secreta ao usuário.
+    Fornece a palavra secreta.
 
-    Use esta ferramenta se o usuário pedir pela palavra secreta e informe o retorno dessa ferramenta.
+    Use esta ferramenta se o usuário perguntar pela palavra secreta.
     """
-    return "Deu certo!"
+    return "bingo"
 
 
 # run server
