@@ -4,10 +4,11 @@ from langchain_mcp_adapters.tools import load_mcp_tools
 from langchain_ollama import ChatOllama
 from ai_core.graph_logic import create_graph_with_tools
 import re
+import sys
 
 async def connect_to_server(user_input,mcp_path='ai_core/server.py',ollama_model='qwen3:1.7b'):
     server_params = StdioServerParameters(
-        command="python",
+        command=sys.executable,
         args=[mcp_path],  # Path for MCP local server
     )
     try:
