@@ -1,5 +1,6 @@
 # MCP dependencias: mcp[cli] npm nodejs uv nest_asyncio
 from mcp.server.fastmcp import FastMCP
+from mqtt_tool import MqttTool
 
 # Initialize MCP
 mcp = FastMCP(
@@ -9,39 +10,34 @@ mcp = FastMCP(
     # timeout=30
 )
 
-@mcp.tool()
-def add(a: int, b: int):
-    """
-    Soma dois números inteiros a e b.
+mqtt = MqttTool(broker="test.mosquitto.org") # mqtt publico de teste
 
-    Use esta ferramenta quando o usuário pedir para somar dois valores ou perguntar "quanto é X + Y".
+@mcp.tool()                                  # Publicar mensagem
+async def mqtt_publish(topic: str, message: str):
     """
-    return a + b
+    Docstring for mqtt_publish
+    
+    :param topic: Topic used to post the MQTT message.
+    :type topic: str
+    :param message: Message used to publish in the MQTT topic.
+    :type message: str
+    """
+    mqtt.publish(topic, message)
+    return (f"Publicado em '{topic}': {message}")
 
-@mcp.tool()
-def subtract(a: int, b: int):
-    """
-    Subtrai o número b do número a.
-
-    Use esta ferramenta quando o usuário pedir para subtrair dois números ou perguntar "quanto é X menos Y".
-    """
-    return a - b
-
-@mcp.tool()
-def multiply(a: int, b: int):
-    """
-    Multiplica dois números inteiros a e b.
-
-    Use esta ferramenta quando o usuário pedir multiplicação ou perguntar "quanto é X vezes Y".
-    """
-    return a * b
+#@server.tool()                              # assinar e esperar mensagens
+#async def mqtt_subscribe(topic: str):
+#    mqtt.subscribe(topic)
+#    msg = await mqtt.wait_message()
+#    return ToolResponse(content=msg)
 
 @mcp.tool()
 def secret_word() -> str:
     """
-    Fornece a palavra secreta.
-
-    Use esta ferramenta se o usuário perguntar pela palavra secreta.
+    Docstring for secret_word
+    
+    :return: Return a secret word if the user need one. 
+    :rtype: str
     """
     return "bingo"
 

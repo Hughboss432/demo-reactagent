@@ -6,3 +6,4 @@ langchain-ollama
 streamlit
 typing-extensions
 pydantic
+paho-mqtt

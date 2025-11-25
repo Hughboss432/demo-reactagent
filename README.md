@@ -1,6 +1,6 @@
 # Steamlit-test – Quick Start Guide
 
-Transforme o repositório em um app local que usa qwen3:1.7b via **Ollama** e ferramentas MCP.
+Transforme o repositório em um app local que usa llms via **Ollama** e ferramentas MCP.
 
 ---
 
@@ -15,6 +15,7 @@ Transforme o repositório em um app local que usa qwen3:1.7b via **Ollama** e fe
 
 > **Windows** / **macOS**: baixe o instalador gráfico em [https://ollama.ai](https://ollama.ai).
 
+# Tutorial Linux:
 ---
 
 ## 1 ▪ Baixe o modelo qwen3:1.7b
