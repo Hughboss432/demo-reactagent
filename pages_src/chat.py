@@ -6,7 +6,7 @@ from langchain_core.messages import AIMessage, HumanMessage
 class AIChatPage:                                   # AI Chat page
     def render(self):
         st.title("AI Chat")
-        st.write(f"User: {st.session_state.get('user', 'Unknown')}")
+        st.caption(f"👤 User: {st.session_state.get('user', 'Unknown')}")
 
         if "chat" not in st.session_state:
             st.session_state.chat = []

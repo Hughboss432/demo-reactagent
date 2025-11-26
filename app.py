@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from pages_src.home import HomePage
 from pages_src.chat import AIChatPage
 from pages_src.login import LoginPage
@@ -17,11 +18,14 @@ class AppController:                                  # Side bar Menu
 
 class App:                                            # Class page controller
     def __init__(self):
-        if "page" not in st.session_state:
+        if "page" not in st.session_state:            # Page state
             st.session_state.page = "home"
-
-        if "user" not in st.session_state:
+        if "user" not in st.session_state:            # User state
             st.session_state.user = "Unknown"
+        if "btn_adm" not in st.session_state:         # bnt state
+            st.session_state.btn_adm = "None"
+        if "db" not in st.session_state:
+            st.session_state.db = pd.DataFrame(columns=["Nome", "Preço", "Quantidade"])
 
         self.home = HomePage()
         self.chat = AIChatPage()
