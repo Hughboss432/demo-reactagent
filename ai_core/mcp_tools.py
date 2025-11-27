@@ -6,7 +6,7 @@ from ai_core.graph_logic import create_graph_with_tools
 import re
 import sys
 
-async def connect_to_server(user_input,mcp_path='ai_core/server.py',ollama_model='qwen2.5:1.5b'):
+async def connect_to_server(user_input,mcp_path='ai_core/server.py',ollama_model='qwen3:1.7b'):
     server_params = StdioServerParameters(
         command=sys.executable,
         args=[mcp_path],  # Path for MCP local server
